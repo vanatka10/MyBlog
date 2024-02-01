@@ -82,7 +82,7 @@ tocopen = false
 
   [[params.socialIcons]]
   name = "github"
-  url = "https://github.com/"
+  url = "https://github.com/vanatka10"
 
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
