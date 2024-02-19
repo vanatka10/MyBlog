@@ -20,5 +20,12 @@
       <guid>https://vanatka10.github.io/myblog/docs/test/</guid>
       <description>this is test page hello</description>
     </item>
+    <item>
+      <title></title>
+      <link>https://vanatka10.github.io/myblog/docs/test2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://vanatka10.github.io/myblog/docs/test2/</guid>
+      <description>writeup office user RECON PORT STATE SERVICE REASON VERSION 53/tcp open domain syn-ack Simple DNS Plus 80/tcp open http syn-ack Apache httpd 2.4.56 ((Win64) OpenSSL/1.1.1t PHP/8.0.28) | http-methods: |_ Supported Methods: GET HEAD POST OPTIONS | http-robots.txt: 16 disallowed entries | /joomla/administrator/ /administrator/ /api/ /bin/ | /cache/ /cli/ /components/ /includes/ /installation/ |_/language/ /layouts/ /libraries/ /logs/ /modules/ /plugins/ /tmp/ |_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28 |_http-generator: Joomla! - Open Source Content Management |_http-favicon: Unknown favicon MD5: 1B6942E22443109DAEA739524AB74123 |_http-title: Home 88/tcp open kerberos-sec syn-ack Microsoft Windows Kerberos (server time: 2024-02-19 14:34:25Z) 139/tcp open netbios-ssn syn-ack Microsoft Windows netbios-ssn 389/tcp open ldap syn-ack Microsoft Windows Active Directory LDAP (Domain: office.</description>
+    </item>
   </channel>
 </rss>
