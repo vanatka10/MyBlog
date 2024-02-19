@@ -257,3 +257,9 @@ Service detection performed. Please report any incorrect results at https://nmap
 ```
 ### web
 this web has robot file and have dir 
+
+### smb
+```
+smbclient //10.129.198.153/SOC\ Analysis  -U 'dwolfe'
+```
+and get file pcap
