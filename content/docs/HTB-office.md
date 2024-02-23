@@ -1,5 +1,6 @@
 +++
 title = 'Test'
+draft = false
 +++
 # writeup office HTB(user)
 ## user
