@@ -1,4 +1,4 @@
-# writeup office
+# writeup office HTB(user)
 ## user
 ### RECON
 ```
@@ -18,222 +18,7 @@ PORT      STATE SERVICE       REASON  VERSION
 88/tcp    open  kerberos-sec  syn-ack Microsoft Windows Kerberos (server time: 2024-02-19 14:34:25Z)
 139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
 389/tcp   open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: office.htb0., Site: Default-First-Site-Name)
-| ssl-cert: Subject: commonName=DC.office.htb
-| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::<unsupported>, DNS:DC.office.htb
-| Issuer: commonName=office-DC-CA/domainComponent=office
-| Public Key type: rsa
-| Public Key bits: 2048
-| Signature Algorithm: sha256WithRSAEncryption
-| Not valid before: 2023-05-10T12:36:58
-| Not valid after:  2024-05-09T12:36:58
-| MD5:   b83fab78db28734dde8411e9420f8878
-| SHA-1: 36c4cedf91853d4c598c739a8bc7a0624458cfe4
-| -----BEGIN CERTIFICATE-----
-| MIIFyzCCBLOgAwIBAgITQAAAAAMdA83RpYN55AAAAAAAAzANBgkqhkiG9w0BAQsF
-| ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRYwFAYKCZImiZPyLGQBGRYGb2ZmaWNl
-| MRUwEwYDVQQDEwxvZmZpY2UtREMtQ0EwHhcNMjMwNTEwMTIzNjU4WhcNMjQwNTA5
-| MTIzNjU4WjAYMRYwFAYDVQQDEw1EQy5vZmZpY2UuaHRiMIIBIjANBgkqhkiG9w0B
-| AQEFAAOCAQ8AMIIBCgKCAQEA15Wa3dfyWK0+9iRvZ2H4VWeXwLq40Ee6jzcu8buW
-| D/Hp4rubrQa5X2/iS3NdXMsxamygq4s7R5AJa9Ys3I7sm59ctlCo/vjVag0hbqhU
-| 5qjBJ1GCQxdiaqRj3BqAO5Tbt9RUH9oeU/UQMzzUQqwKL/Z+twyh9aL6HDnbPXvM
-| IeDewk5y/S6M8DlOc6ORZQfBg8NuroyiPYCNb1+WhednfBB0ahNFqzq2MTDLXMNM
-| bLeX2zeO/+dgF1ohsQ9qhFyBtFSsaCMR33PMKNs7Iqji42+O5jVNCvUICelUroex
-| 1VrC7ogW/JVSqHY4J+6mXZHJhn7xhu6rJKtFDHLeheheRQIDAQABo4IC4DCCAtww
-| LwYJKwYBBAGCNxQCBCIeIABEAG8AbQBhAGkAbgBDAG8AbgB0AHIAbwBsAGwAZQBy
-| MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAOBgNVHQ8BAf8EBAMCBaAw
-| eAYJKoZIhvcNAQkPBGswaTAOBggqhkiG9w0DAgICAIAwDgYIKoZIhvcNAwQCAgCA
-| MAsGCWCGSAFlAwQBKjALBglghkgBZQMEAS0wCwYJYIZIAWUDBAECMAsGCWCGSAFl
-| AwQBBTAHBgUrDgMCBzAKBggqhkiG9w0DBzA5BgNVHREEMjAwoB8GCSsGAQQBgjcZ
-| AaASBBA2idyIqAZET5Xm5iLN7Fc3gg1EQy5vZmZpY2UuaHRiMB0GA1UdDgQWBBRS
-| FLVfJhlc3XkBccZHJjyKvpRS1TAfBgNVHSMEGDAWgBRgOpmCFktRJECTymSHaes3
-| Vx3p9jCBxAYDVR0fBIG8MIG5MIG2oIGzoIGwhoGtbGRhcDovLy9DTj1vZmZpY2Ut
-| REMtQ0EsQ049REMsQ049Q0RQLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENO
-| PVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9b2ZmaWNlLERDPWh0Yj9jZXJ0
-| aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJp
-| YnV0aW9uUG9pbnQwgb0GCCsGAQUFBwEBBIGwMIGtMIGqBggrBgEFBQcwAoaBnWxk
-| YXA6Ly8vQ049b2ZmaWNlLURDLUNBLENOPUFJQSxDTj1QdWJsaWMlMjBLZXklMjBT
-| ZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9uLERDPW9mZmljZSxE
-| Qz1odGI/Y0FDZXJ0aWZpY2F0ZT9iYXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRp
-| b25BdXRob3JpdHkwDQYJKoZIhvcNAQELBQADggEBABw9WEKbYyfAE7PZ0Plb7lxB
-| Ftvjpqh2Q9RkdSlxQNdWMfSsZozN6UNTG7mgJBB/T9vZpi8USJTGwf1EfygiDbm1
-| yofBMvpqLAXg4ANvWXTDChYSumhlt7W+gJzTgWd4mgRp576acFojnNCqQRhYCD8r
-| 6r/PIwlCDSwfLExxhQs7ZL3Jkqt/fP85ic3W9GuzwI9isPZmwsezP/korptA7utb
-| sJHn2bydwf907VX2usW8yRmpuRZyvfsbYHYjJqFgohB5dh26ltEQz2vX6y4Mte4L
-| 024aNx/gANh3F4gFXpGrAWdVxnHXc1QV9OVRHO+FAL30xdhosJ4D4HdRTDjCfqw=
-|_-----END CERTIFICATE-----
-|_ssl-date: TLS randomness does not represent time
-443/tcp   open  ssl/http      syn-ack Apache httpd 2.4.56 (OpenSSL/1.1.1t PHP/8.0.28)
-| ssl-cert: Subject: commonName=localhost
-| Issuer: commonName=localhost
-| Public Key type: rsa
-| Public Key bits: 1024
-| Signature Algorithm: sha1WithRSAEncryption
-| Not valid before: 2009-11-10T23:48:47
-| Not valid after:  2019-11-08T23:48:47
-| MD5:   a0a44cc99e84b26f9e639f9ed229dee0
-| SHA-1: b0238c547a905bfa119c4e8baccaeacf36491ff6
-| -----BEGIN CERTIFICATE-----
-| MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
-| b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD
-| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj
-| 7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o
-| J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT
-| gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD
-| gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd
-| aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL
-| vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=
-|_-----END CERTIFICATE-----
-|_ssl-date: TLS randomness does not represent time
-|_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28
-|_http-title: 403 Forbidden
-| tls-alpn: 
-|_  http/1.1
-445/tcp   open  microsoft-ds? syn-ack
-464/tcp   open  kpasswd5?     syn-ack
-593/tcp   open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
-636/tcp   open  ssl/ldap      syn-ack Microsoft Windows Active Directory LDAP (Domain: office.htb0., Site: Default-First-Site-Name)
-| ssl-cert: Subject: commonName=DC.office.htb
-| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::<unsupported>, DNS:DC.office.htb
-| Issuer: commonName=office-DC-CA/domainComponent=office
-| Public Key type: rsa
-| Public Key bits: 2048
-| Signature Algorithm: sha256WithRSAEncryption
-| Not valid before: 2023-05-10T12:36:58
-| Not valid after:  2024-05-09T12:36:58
-| MD5:   b83fab78db28734dde8411e9420f8878
-| SHA-1: 36c4cedf91853d4c598c739a8bc7a0624458cfe4
-| -----BEGIN CERTIFICATE-----
-| MIIFyzCCBLOgAwIBAgITQAAAAAMdA83RpYN55AAAAAAAAzANBgkqhkiG9w0BAQsF
-| ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRYwFAYKCZImiZPyLGQBGRYGb2ZmaWNl
-| MRUwEwYDVQQDEwxvZmZpY2UtREMtQ0EwHhcNMjMwNTEwMTIzNjU4WhcNMjQwNTA5
-| MTIzNjU4WjAYMRYwFAYDVQQDEw1EQy5vZmZpY2UuaHRiMIIBIjANBgkqhkiG9w0B
-| AQEFAAOCAQ8AMIIBCgKCAQEA15Wa3dfyWK0+9iRvZ2H4VWeXwLq40Ee6jzcu8buW
-| D/Hp4rubrQa5X2/iS3NdXMsxamygq4s7R5AJa9Ys3I7sm59ctlCo/vjVag0hbqhU
-| 5qjBJ1GCQxdiaqRj3BqAO5Tbt9RUH9oeU/UQMzzUQqwKL/Z+twyh9aL6HDnbPXvM
-| IeDewk5y/S6M8DlOc6ORZQfBg8NuroyiPYCNb1+WhednfBB0ahNFqzq2MTDLXMNM
-| bLeX2zeO/+dgF1ohsQ9qhFyBtFSsaCMR33PMKNs7Iqji42+O5jVNCvUICelUroex
-| 1VrC7ogW/JVSqHY4J+6mXZHJhn7xhu6rJKtFDHLeheheRQIDAQABo4IC4DCCAtww
-| LwYJKwYBBAGCNxQCBCIeIABEAG8AbQBhAGkAbgBDAG8AbgB0AHIAbwBsAGwAZQBy
-| MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAOBgNVHQ8BAf8EBAMCBaAw
-| eAYJKoZIhvcNAQkPBGswaTAOBggqhkiG9w0DAgICAIAwDgYIKoZIhvcNAwQCAgCA
-| MAsGCWCGSAFlAwQBKjALBglghkgBZQMEAS0wCwYJYIZIAWUDBAECMAsGCWCGSAFl
-| AwQBBTAHBgUrDgMCBzAKBggqhkiG9w0DBzA5BgNVHREEMjAwoB8GCSsGAQQBgjcZ
-| AaASBBA2idyIqAZET5Xm5iLN7Fc3gg1EQy5vZmZpY2UuaHRiMB0GA1UdDgQWBBRS
-| FLVfJhlc3XkBccZHJjyKvpRS1TAfBgNVHSMEGDAWgBRgOpmCFktRJECTymSHaes3
-| Vx3p9jCBxAYDVR0fBIG8MIG5MIG2oIGzoIGwhoGtbGRhcDovLy9DTj1vZmZpY2Ut
-| REMtQ0EsQ049REMsQ049Q0RQLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENO
-| PVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9b2ZmaWNlLERDPWh0Yj9jZXJ0
-| aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJp
-| YnV0aW9uUG9pbnQwgb0GCCsGAQUFBwEBBIGwMIGtMIGqBggrBgEFBQcwAoaBnWxk
-| YXA6Ly8vQ049b2ZmaWNlLURDLUNBLENOPUFJQSxDTj1QdWJsaWMlMjBLZXklMjBT
-| ZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9uLERDPW9mZmljZSxE
-| Qz1odGI/Y0FDZXJ0aWZpY2F0ZT9iYXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRp
-| b25BdXRob3JpdHkwDQYJKoZIhvcNAQELBQADggEBABw9WEKbYyfAE7PZ0Plb7lxB
-| Ftvjpqh2Q9RkdSlxQNdWMfSsZozN6UNTG7mgJBB/T9vZpi8USJTGwf1EfygiDbm1
-| yofBMvpqLAXg4ANvWXTDChYSumhlt7W+gJzTgWd4mgRp576acFojnNCqQRhYCD8r
-| 6r/PIwlCDSwfLExxhQs7ZL3Jkqt/fP85ic3W9GuzwI9isPZmwsezP/korptA7utb
-| sJHn2bydwf907VX2usW8yRmpuRZyvfsbYHYjJqFgohB5dh26ltEQz2vX6y4Mte4L
-| 024aNx/gANh3F4gFXpGrAWdVxnHXc1QV9OVRHO+FAL30xdhosJ4D4HdRTDjCfqw=
-|_-----END CERTIFICATE-----
-|_ssl-date: TLS randomness does not represent time
-3268/tcp  open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: office.htb0., Site: Default-First-Site-Name)
-| ssl-cert: Subject: commonName=DC.office.htb
-| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::<unsupported>, DNS:DC.office.htb
-| Issuer: commonName=office-DC-CA/domainComponent=office
-| Public Key type: rsa
-| Public Key bits: 2048
-| Signature Algorithm: sha256WithRSAEncryption
-| Not valid before: 2023-05-10T12:36:58
-| Not valid after:  2024-05-09T12:36:58
-| MD5:   b83fab78db28734dde8411e9420f8878
-| SHA-1: 36c4cedf91853d4c598c739a8bc7a0624458cfe4
-| -----BEGIN CERTIFICATE-----
-| MIIFyzCCBLOgAwIBAgITQAAAAAMdA83RpYN55AAAAAAAAzANBgkqhkiG9w0BAQsF
-| ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRYwFAYKCZImiZPyLGQBGRYGb2ZmaWNl
-| MRUwEwYDVQQDEwxvZmZpY2UtREMtQ0EwHhcNMjMwNTEwMTIzNjU4WhcNMjQwNTA5
-| MTIzNjU4WjAYMRYwFAYDVQQDEw1EQy5vZmZpY2UuaHRiMIIBIjANBgkqhkiG9w0B
-| AQEFAAOCAQ8AMIIBCgKCAQEA15Wa3dfyWK0+9iRvZ2H4VWeXwLq40Ee6jzcu8buW
-| D/Hp4rubrQa5X2/iS3NdXMsxamygq4s7R5AJa9Ys3I7sm59ctlCo/vjVag0hbqhU
-| 5qjBJ1GCQxdiaqRj3BqAO5Tbt9RUH9oeU/UQMzzUQqwKL/Z+twyh9aL6HDnbPXvM
-| IeDewk5y/S6M8DlOc6ORZQfBg8NuroyiPYCNb1+WhednfBB0ahNFqzq2MTDLXMNM
-| bLeX2zeO/+dgF1ohsQ9qhFyBtFSsaCMR33PMKNs7Iqji42+O5jVNCvUICelUroex
-| 1VrC7ogW/JVSqHY4J+6mXZHJhn7xhu6rJKtFDHLeheheRQIDAQABo4IC4DCCAtww
-| LwYJKwYBBAGCNxQCBCIeIABEAG8AbQBhAGkAbgBDAG8AbgB0AHIAbwBsAGwAZQBy
-| MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAOBgNVHQ8BAf8EBAMCBaAw
-| eAYJKoZIhvcNAQkPBGswaTAOBggqhkiG9w0DAgICAIAwDgYIKoZIhvcNAwQCAgCA
-| MAsGCWCGSAFlAwQBKjALBglghkgBZQMEAS0wCwYJYIZIAWUDBAECMAsGCWCGSAFl
-| AwQBBTAHBgUrDgMCBzAKBggqhkiG9w0DBzA5BgNVHREEMjAwoB8GCSsGAQQBgjcZ
-| AaASBBA2idyIqAZET5Xm5iLN7Fc3gg1EQy5vZmZpY2UuaHRiMB0GA1UdDgQWBBRS
-| FLVfJhlc3XkBccZHJjyKvpRS1TAfBgNVHSMEGDAWgBRgOpmCFktRJECTymSHaes3
-| Vx3p9jCBxAYDVR0fBIG8MIG5MIG2oIGzoIGwhoGtbGRhcDovLy9DTj1vZmZpY2Ut
-| REMtQ0EsQ049REMsQ049Q0RQLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENO
-| PVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9b2ZmaWNlLERDPWh0Yj9jZXJ0
-| aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJp
-| YnV0aW9uUG9pbnQwgb0GCCsGAQUFBwEBBIGwMIGtMIGqBggrBgEFBQcwAoaBnWxk
-| YXA6Ly8vQ049b2ZmaWNlLURDLUNBLENOPUFJQSxDTj1QdWJsaWMlMjBLZXklMjBT
-| ZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9uLERDPW9mZmljZSxE
-| Qz1odGI/Y0FDZXJ0aWZpY2F0ZT9iYXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRp
-| b25BdXRob3JpdHkwDQYJKoZIhvcNAQELBQADggEBABw9WEKbYyfAE7PZ0Plb7lxB
-| Ftvjpqh2Q9RkdSlxQNdWMfSsZozN6UNTG7mgJBB/T9vZpi8USJTGwf1EfygiDbm1
-| yofBMvpqLAXg4ANvWXTDChYSumhlt7W+gJzTgWd4mgRp576acFojnNCqQRhYCD8r
-| 6r/PIwlCDSwfLExxhQs7ZL3Jkqt/fP85ic3W9GuzwI9isPZmwsezP/korptA7utb
-| sJHn2bydwf907VX2usW8yRmpuRZyvfsbYHYjJqFgohB5dh26ltEQz2vX6y4Mte4L
-| 024aNx/gANh3F4gFXpGrAWdVxnHXc1QV9OVRHO+FAL30xdhosJ4D4HdRTDjCfqw=
-|_-----END CERTIFICATE-----
-|_ssl-date: TLS randomness does not represent time
-3269/tcp  open  ssl/ldap      syn-ack Microsoft Windows Active Directory LDAP (Domain: office.htb0., Site: Default-First-Site-Name)
-|_ssl-date: TLS randomness does not represent time
-| ssl-cert: Subject: commonName=DC.office.htb
-| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::<unsupported>, DNS:DC.office.htb
-| Issuer: commonName=office-DC-CA/domainComponent=office
-| Public Key type: rsa
-| Public Key bits: 2048
-| Signature Algorithm: sha256WithRSAEncryption
-| Not valid before: 2023-05-10T12:36:58
-| Not valid after:  2024-05-09T12:36:58
-| MD5:   b83fab78db28734dde8411e9420f8878
-| SHA-1: 36c4cedf91853d4c598c739a8bc7a0624458cfe4
-| -----BEGIN CERTIFICATE-----
-| MIIFyzCCBLOgAwIBAgITQAAAAAMdA83RpYN55AAAAAAAAzANBgkqhkiG9w0BAQsF
-| ADBEMRMwEQYKCZImiZPyLGQBGRYDaHRiMRYwFAYKCZImiZPyLGQBGRYGb2ZmaWNl
-| MRUwEwYDVQQDEwxvZmZpY2UtREMtQ0EwHhcNMjMwNTEwMTIzNjU4WhcNMjQwNTA5
-| MTIzNjU4WjAYMRYwFAYDVQQDEw1EQy5vZmZpY2UuaHRiMIIBIjANBgkqhkiG9w0B
-| AQEFAAOCAQ8AMIIBCgKCAQEA15Wa3dfyWK0+9iRvZ2H4VWeXwLq40Ee6jzcu8buW
-| D/Hp4rubrQa5X2/iS3NdXMsxamygq4s7R5AJa9Ys3I7sm59ctlCo/vjVag0hbqhU
-| 5qjBJ1GCQxdiaqRj3BqAO5Tbt9RUH9oeU/UQMzzUQqwKL/Z+twyh9aL6HDnbPXvM
-| IeDewk5y/S6M8DlOc6ORZQfBg8NuroyiPYCNb1+WhednfBB0ahNFqzq2MTDLXMNM
-| bLeX2zeO/+dgF1ohsQ9qhFyBtFSsaCMR33PMKNs7Iqji42+O5jVNCvUICelUroex
-| 1VrC7ogW/JVSqHY4J+6mXZHJhn7xhu6rJKtFDHLeheheRQIDAQABo4IC4DCCAtww
-| LwYJKwYBBAGCNxQCBCIeIABEAG8AbQBhAGkAbgBDAG8AbgB0AHIAbwBsAGwAZQBy
-| MB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEFBQcDATAOBgNVHQ8BAf8EBAMCBaAw
-| eAYJKoZIhvcNAQkPBGswaTAOBggqhkiG9w0DAgICAIAwDgYIKoZIhvcNAwQCAgCA
-| MAsGCWCGSAFlAwQBKjALBglghkgBZQMEAS0wCwYJYIZIAWUDBAECMAsGCWCGSAFl
-| AwQBBTAHBgUrDgMCBzAKBggqhkiG9w0DBzA5BgNVHREEMjAwoB8GCSsGAQQBgjcZ
-| AaASBBA2idyIqAZET5Xm5iLN7Fc3gg1EQy5vZmZpY2UuaHRiMB0GA1UdDgQWBBRS
-| FLVfJhlc3XkBccZHJjyKvpRS1TAfBgNVHSMEGDAWgBRgOpmCFktRJECTymSHaes3
-| Vx3p9jCBxAYDVR0fBIG8MIG5MIG2oIGzoIGwhoGtbGRhcDovLy9DTj1vZmZpY2Ut
-| REMtQ0EsQ049REMsQ049Q0RQLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENO
-| PVNlcnZpY2VzLENOPUNvbmZpZ3VyYXRpb24sREM9b2ZmaWNlLERDPWh0Yj9jZXJ0
-| aWZpY2F0ZVJldm9jYXRpb25MaXN0P2Jhc2U/b2JqZWN0Q2xhc3M9Y1JMRGlzdHJp
-| YnV0aW9uUG9pbnQwgb0GCCsGAQUFBwEBBIGwMIGtMIGqBggrBgEFBQcwAoaBnWxk
-| YXA6Ly8vQ049b2ZmaWNlLURDLUNBLENOPUFJQSxDTj1QdWJsaWMlMjBLZXklMjBT
-| ZXJ2aWNlcyxDTj1TZXJ2aWNlcyxDTj1Db25maWd1cmF0aW9uLERDPW9mZmljZSxE
-| Qz1odGI/Y0FDZXJ0aWZpY2F0ZT9iYXNlP29iamVjdENsYXNzPWNlcnRpZmljYXRp
-| b25BdXRob3JpdHkwDQYJKoZIhvcNAQELBQADggEBABw9WEKbYyfAE7PZ0Plb7lxB
-| Ftvjpqh2Q9RkdSlxQNdWMfSsZozN6UNTG7mgJBB/T9vZpi8USJTGwf1EfygiDbm1
-| yofBMvpqLAXg4ANvWXTDChYSumhlt7W+gJzTgWd4mgRp576acFojnNCqQRhYCD8r
-| 6r/PIwlCDSwfLExxhQs7ZL3Jkqt/fP85ic3W9GuzwI9isPZmwsezP/korptA7utb
-| sJHn2bydwf907VX2usW8yRmpuRZyvfsbYHYjJqFgohB5dh26ltEQz2vX6y4Mte4L
-| 024aNx/gANh3F4gFXpGrAWdVxnHXc1QV9OVRHO+FAL30xdhosJ4D4HdRTDjCfqw=
-|_-----END CERTIFICATE-----
-9389/tcp  open  mc-nmf        syn-ack .NET Message Framing
-49664/tcp open  msrpc         syn-ack Microsoft Windows RPC
-49668/tcp open  msrpc         syn-ack Microsoft Windows RPC
-49681/tcp open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
-51966/tcp open  msrpc         syn-ack Microsoft Windows RPC
-51984/tcp open  msrpc         syn-ack Microsoft Windows RPC
-56658/tcp open  msrpc         syn-ack Microsoft Windows RPC
-Service Info: Hosts: DC, www.example.com; OS: Windows; CPE: cpe:/o:microsoft:windows
+..........................................
 
 Host script results:
 | p2p-conficker: 
@@ -256,10 +41,59 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Mon Feb 19 01:36:08 2024 -- 1 IP address (1 host up) scanned in 105.60 seconds
 ```
 ### web
-this web has robot file and have dir 
+let check admin page 
+![image](https://github.com/vanatka10/myblog/assets/126310360/8cf1bcb3-0cb5-4c13-93c0-a7d89ea5a3f8)
 
+i have login with some default username and password but nothing are corret
+
+let check version joomla
+we can check verion with following path:
+```
+Version
+In /administrator/manifests/files/joomla.xml you can see the version.
+In /language/en-GB/en-GB.xml you can get the version of Joomla.
+In plugins/system/cache/cache.xml you can see an approximate version.
+```
+https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/joomla
+
+![image](https://github.com/vanatka10/myblog/assets/126310360/857f9313-2f9e-43d5-a2a7-889871041884)
+### CVE-2023-23752
+we can easily found cve of this version
+![image](https://github.com/vanatka10/myblog/assets/126310360/6607d033-ebe1-4973-a4fd-99226cdf4ce1)
+
+Unauthenticated information disclosure that's exactly what we want.
+
+look at some exploit file we can see it with send request to some uri and retrieve some useful information:
+```
+{root_url}/api/index.php/v1/users?public=true
+{root_url}/api/index.php/v1/config/application?public=true
+```
+![image](https://github.com/vanatka10/myblog/assets/126310360/7abb26a3-441a-466b-91ad-d538bbf8b461)
+
+https://github.com/Acceis/exploit-CVE-2023-23752.git
 ### smb
 ```
 smbclient //10.129.198.153/SOC\ Analysis  -U 'dwolfe'
 ```
 and get file pcap
+
+following this article we get username, hash and crack password with hashcat
+https://vbscrub.com/2020/02/27/getting-passwords-from-kerberos-pre-authentication-packets/
+```
+$krb5pa$18$tstark$OFFICE.HTB$a16f4806da05760af63c566d566f071c5bb35d0a414459417613a9d67932a6735704d0832767af226aaa7360338a34746a00a3765386f5fc
+```
+
+```
+hashcat -m 19900 hash.txt /user/share/wordlist/rockyou.txt
+```
+
+pass:playboy69
+
+### user
+
+login admin panel -> template and ... get reverse shell
+![image](https://github.com/vanatka10/myblog/assets/126310360/aaaf5e9b-a270-4b37-a264-d755805607e1)
+
+next we use runas to elevate an account
+
+
