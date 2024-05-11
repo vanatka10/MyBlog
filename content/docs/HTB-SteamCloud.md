@@ -319,7 +319,7 @@ spec:
   - name: malicous
     image: nginx:1.14.2
     volumeMounts:
-    - mountPath: /root
+    - mountPath: /mnt
       name: rooty
   volumes:
   - name: rooty
