@@ -141,4 +141,6 @@ SMB         10.10.11.41     445    DC01             1601: CERTIFIED\alexander.hu
 SMB         10.10.11.41     445    DC01             1602: CERTIFIED\harry.wilson (SidTypeUser)
 SMB         10.10.11.41     445    DC01             1603: CERTIFIED\gregory.cameron (SidTypeUser)
 ```
+## bloodhound
+./bloodhound.py -ns "10.10.11.41" -d "certified.htb" -u "judith.mader" -p "judith09" -k
 
