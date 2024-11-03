@@ -98,3 +98,7 @@ Read data files from: /usr/bin/../share/nmap
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 114.01 seconds
 ```
+### kerbrute
+```./kerbrute_linux_amd64 userenum --dc 10.10.11.41 -d certified.htb  /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt```
+
+nothing interesting
