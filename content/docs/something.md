@@ -102,3 +102,43 @@ Nmap done: 1 IP address (1 host up) scanned in 114.01 seconds
 ```./kerbrute_linux_amd64 userenum --dc 10.10.11.41 -d certified.htb  /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt```
 
 nothing interesting
+![image](https://github.com/user-attachments/assets/e23a5c8f-455b-4170-b5aa-e07810f903db)
+oh crap
+### smb
+```
+nxc smb 10.10.11.41 -u judith.mader -p judith09 --rid-brute
+SMB         10.10.11.41     445    DC01             [*] Windows 10 / Server 2019 Build 17763 x64 (name:DC01) (domain:certified.htb) (signing:True) (SMBv1:False)
+SMB         10.10.11.41     445    DC01             [+] certified.htb\judith.mader:judith09 
+SMB         10.10.11.41     445    DC01             498: CERTIFIED\Enterprise Read-only Domain Controllers (SidTypeGroup)                                                                                                               
+SMB         10.10.11.41     445    DC01             500: CERTIFIED\Administrator (SidTypeUser)
+SMB         10.10.11.41     445    DC01             501: CERTIFIED\Guest (SidTypeUser)
+SMB         10.10.11.41     445    DC01             502: CERTIFIED\krbtgt (SidTypeUser)
+SMB         10.10.11.41     445    DC01             512: CERTIFIED\Domain Admins (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             513: CERTIFIED\Domain Users (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             514: CERTIFIED\Domain Guests (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             515: CERTIFIED\Domain Computers (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             516: CERTIFIED\Domain Controllers (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             517: CERTIFIED\Cert Publishers (SidTypeAlias)
+SMB         10.10.11.41     445    DC01             518: CERTIFIED\Schema Admins (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             519: CERTIFIED\Enterprise Admins (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             520: CERTIFIED\Group Policy Creator Owners (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             521: CERTIFIED\Read-only Domain Controllers (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             522: CERTIFIED\Cloneable Domain Controllers (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             525: CERTIFIED\Protected Users (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             526: CERTIFIED\Key Admins (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             527: CERTIFIED\Enterprise Key Admins (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             553: CERTIFIED\RAS and IAS Servers (SidTypeAlias)
+SMB         10.10.11.41     445    DC01             571: CERTIFIED\Allowed RODC Password Replication Group (SidTypeAlias)                                                                                                               
+SMB         10.10.11.41     445    DC01             572: CERTIFIED\Denied RODC Password Replication Group (SidTypeAlias)                                                                                                                
+SMB         10.10.11.41     445    DC01             1000: CERTIFIED\DC01$ (SidTypeUser)
+SMB         10.10.11.41     445    DC01             1101: CERTIFIED\DnsAdmins (SidTypeAlias)
+SMB         10.10.11.41     445    DC01             1102: CERTIFIED\DnsUpdateProxy (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             1103: CERTIFIED\judith.mader (SidTypeUser)
+SMB         10.10.11.41     445    DC01             1104: CERTIFIED\Management (SidTypeGroup)
+SMB         10.10.11.41     445    DC01             1105: CERTIFIED\management_svc (SidTypeUser)
+SMB         10.10.11.41     445    DC01             1106: CERTIFIED\ca_operator (SidTypeUser)
+SMB         10.10.11.41     445    DC01             1601: CERTIFIED\alexander.huges (SidTypeUser)
+SMB         10.10.11.41     445    DC01             1602: CERTIFIED\harry.wilson (SidTypeUser)
+SMB         10.10.11.41     445    DC01             1603: CERTIFIED\gregory.cameron (SidTypeUser)
+```
+
