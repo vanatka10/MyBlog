@@ -22,6 +22,13 @@
     </item>
     <item>
       <title></title>
+      <link>https://vanatka10.github.io/myblog/docs/blockblock/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://vanatka10.github.io/myblog/docs/blockblock/</guid>
+      <description> { &amp;#34;jsonrpc&amp;#34;: &amp;#34;2.0&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;eth_getBlockByNumber&amp;#34;, &amp;#34;params&amp;#34;: [ &amp;#34;0x1&amp;#34;, true ], &amp;#34;id&amp;#34;: 1 } </description>
+    </item>
+    <item>
+      <title></title>
       <link>https://vanatka10.github.io/myblog/docs/htb-steamcloud/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://vanatka10.github.io/myblog/docs/htb-steamcloud/</guid>
